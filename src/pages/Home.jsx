@@ -13,6 +13,7 @@ const Container = styled.div`
     display: flex;
     padding: 0px 80px;
     height: calc(100vh - 60px);
+    overflow: hidden;
 `;
 const Left = styled.div`
     flex: 1;
