@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+    background-color: white;
+    width: 100vw;
     height: 60px;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 `;
 
 const Wrapper = styled.div`
@@ -53,7 +58,7 @@ const Navbar = () => {
                         About Us
                     </RightItem>
                     <RightItem>
-                        Services
+                        Testimonials
                     </RightItem>
                     <RightItem contact>
                         Contact Us

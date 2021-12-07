@@ -10,6 +10,8 @@ import instagram from '../images/instagram.png'
 const Container = styled.div`
     height: calc(100vh - 60px);
     background-color: #0a0a5c;
+    position: relative;
+    top: 60px;
 `;
 const Wrapper = styled.div`
     height: 100%;

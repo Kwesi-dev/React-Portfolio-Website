@@ -4,6 +4,8 @@ const Container = styled.div`
     height: calc(100vh - 60px);
     background-color: #0e0d0d;
     overflow: none;
+    position: relative;
+    top: 60px;
 `;
 const Wrapper = styled.div`
     height: 100%;

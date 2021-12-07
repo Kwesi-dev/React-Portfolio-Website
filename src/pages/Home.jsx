@@ -14,6 +14,8 @@ const Container = styled.div`
     padding: 0px 80px;
     height: calc(100vh - 60px);
     overflow: hidden;
+    position: relative;
+    top: 60px;
 `;
 const Left = styled.div`
     flex: 1;
