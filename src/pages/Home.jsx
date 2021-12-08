@@ -127,12 +127,12 @@ const TwitterIcon = styled.img`
     right: -30px;
 `;
 const ManImage = styled.img`
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     position: absolute;
-    bottom: 100px;
-    left: 150px;
+    bottom: 30px;
+    left: 130px;
 `;
 const Home = () => {
     return (
