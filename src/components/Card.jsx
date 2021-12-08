@@ -7,8 +7,12 @@ const Container = styled.div`
     box-shadow: 2px 5px 15px 2px #B8B8B8;
     padding: 10px;
     cursor: pointer;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    transition: all 1s ease;
 
+    &:hover{
+        transform: translateY(-50px);
+    }
 `;
 const Wrapper = styled.div`
     display: flex;

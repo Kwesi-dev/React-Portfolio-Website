@@ -164,7 +164,7 @@ const Icon = styled.div`
 
 const Contact = () => {
     return (
-        <Container>
+        <Container id="contact">
             <Wrapper>
                 <Left>
                     <Top>

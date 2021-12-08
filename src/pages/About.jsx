@@ -145,7 +145,7 @@ const DescItem2 = styled.div`
 `;
 const About = () => {
     return (
-        <Container>
+        <Container id="about">
             <Wrapper>
                 <Top>
                     <Title>ABOUT US</Title>

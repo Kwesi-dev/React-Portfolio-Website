@@ -24,7 +24,7 @@ const Design = styled.div`
 `;
 const Testimonials = () => {
     return (
-        <Container>
+        <Container id="testimonials">
             <Wrapper>
                 {data.map((info)=>
                     <Card key={info.id} info={info}/>

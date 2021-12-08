@@ -136,7 +136,7 @@ const ManImage = styled.img`
 `;
 const Home = () => {
     return (
-        <Container>
+        <Container id="home">
             <Left>
                 <LeftTop>
                     <Title>Hy! I Am </Title>

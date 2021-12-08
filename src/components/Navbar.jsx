@@ -31,13 +31,15 @@ const Right = styled.div`
     align-items: center;
 `;
 
-const RightItem = styled.span`
+const RightItem = styled.a`
     margin-right: 50px;
     border: ${props=>props.contact && '2px solid #55516C'};
     padding: ${props=>props.contact && '10px'};
     border-radius: ${props=>props.contact && '5px'};
     font-weight: bold;
     cursor: pointer;
+    color: inherit;
+    text-decoration: none;
 
     &:hover{
         color: #DC9F40;
@@ -51,16 +53,16 @@ const Navbar = () => {
                     <Logo>Personal</Logo>
                 </Left>
                 <Right>
-                    <RightItem>
+                    <RightItem href="#home">
                         Home
                     </RightItem>
-                    <RightItem>
+                    <RightItem href="#about">
                         About Us
                     </RightItem>
-                    <RightItem>
+                    <RightItem href="#testimonials">
                         Testimonials
                     </RightItem>
-                    <RightItem contact>
+                    <RightItem contact href="#contact">
                         Contact Us
                     </RightItem>
                 </Right>
