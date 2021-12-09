@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { useState } from 'react'
-
+import cross from '../images/cross.png'
 const Container = styled.div`
     background-color: white;
     width: 100vw;
@@ -112,6 +112,16 @@ const DropItem = styled.a`
     text-decoration: none;
     margin-bottom: 20px;
 `;
+const Cross = styled.img`
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    opacity: 0;
+    @media (max-width: 320px) {
+        opacity: 1;
+        margin-right: 35px;
+    }
+`;
 const Navbar = () => {
     const [active, setActive] = useState(false)
     const handleClick = ()=>{
@@ -137,14 +147,20 @@ const Navbar = () => {
                     <RightItem contact href="#contact">
                         Contact Us
                     </RightItem>
-                    <Humbergur onClick={handleClick} active>
-                        <Line></Line>
-                        <Line></Line>
-                        <Line></Line>
-                    </Humbergur>
+                    {active ? (
+                        <Cross src={cross} alt="" onClick={handleClick}/>
+                        ):(
+                        <>
+                            <Humbergur onClick={handleClick}>
+                                <Line></Line>
+                                <Line></Line>
+                                <Line></Line>
+                            </Humbergur>
+                        </>
+                        )}
                 </Right>
                 {active &&
-                <DropDown>
+                <DropDown onClick>
                     <DropItem href="#home">
                         Home
                     </DropItem>
