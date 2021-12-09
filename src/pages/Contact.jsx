@@ -12,12 +12,21 @@ const Container = styled.div`
     background-color: #0a0a5c;
     position: relative;
     top: 60px;
+    @media (max-width: 320px){
+        width: 320px;
+        height: 100%;
+        top: 30px;
+    }
 `;
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
     padding: 50px;
     box-sizing: border-box;
+    @media (max-width: 320px){
+        flex-direction: column;
+        padding: 0;
+    }
 `;
 const Left = styled.div`
     flex: 1;
@@ -98,6 +107,9 @@ const Right = styled.div`
     flex: 1;
     display: flex;
     justify-content: center;
+    @media (max-width: 320px){
+        margin-bottom: 20px;
+    }
 `;
 const Form = styled.div`
     width: 50%;
@@ -109,6 +121,9 @@ const Form = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    @media (max-width: 320px){
+        width: 70%;
+    }
 `;
 const FormItem = styled.div`
     display: flex;
@@ -155,6 +170,9 @@ const Button = styled.button`
     font-weight: 300;
     background-color: #31b7ec;
     margin-top: 10px;
+    @media (max-width: 320px){
+        width: 225px;
+    }
 `;
 const Icon = styled.div`
     margin-right: 5px;

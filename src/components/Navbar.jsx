@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 const Container = styled.div`
     background-color: white;
     width: 100vw;
@@ -7,6 +8,14 @@ const Container = styled.div`
     position: fixed;
     top: 0;
     z-index: 999;
+
+    @media (max-width: 320px){
+        width: 100%;
+        padding: 5px;
+        height: 30px;
+        position: fixed;
+        top: 0;
+    }
 `;
 
 const Wrapper = styled.div`
@@ -15,14 +24,23 @@ const Wrapper = styled.div`
     justify-content: space-between;
     padding: 10px;
     margin: 0px 60px;
+    @media (max-width: 320px){
+        padding: 5px;
+        margin: 0 30px;
+    }
+
 `;
 
-const Left = styled.div`
+const Left = styled.div`    
 `;
 
 const Logo = styled.h2`
     color: #55516C;
     cursor: pointer;
+    @media (max-width: 320px) {
+        font-size: 18px;
+        margin-right: 20px;
+    }
 `;
 
 const Right = styled.div`
@@ -42,6 +60,10 @@ const RightItem = styled.a`
 
     &:hover{
         color: #DC9F40;
+    }
+
+    @media (max-width: 320px) {
+        display: none;
     }
 `;
 const Navbar = () => {
@@ -64,6 +86,7 @@ const Navbar = () => {
                     <RightItem contact href="#contact">
                         Contact Us
                     </RightItem>
+                    
                 </Right>
             </Wrapper>
         </Container>

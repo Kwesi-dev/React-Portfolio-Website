@@ -6,6 +6,11 @@ const Container = styled.div`
     overflow: none;
     position: relative;
     top: 60px;
+    @media (max-width: 320px){
+        width: 320px;
+        top: 30px;
+        height: calc(100vh - 200px);
+    }
 `;
 const Wrapper = styled.div`
     height: 100%;
@@ -14,16 +19,27 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     color: white;
+    @media (max-width: 320px){
+        margin: 0;
+        padding: 0;
+    }
+
 `;
 const Top = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 320px){
+        flex-direction: column;
+    }
 `;
 const Title = styled.h1`
     font-family: 'Lora', sans-serif;
     font-weight: bold;
     font-size: 100px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const JobDone = styled.div`
     display: flex;
@@ -38,6 +54,12 @@ const JobDone = styled.div`
     margin-top: 160px;
     margin-right: 50px;
     position: relative;
+    @media (max-width: 320px){
+        width: 150px;
+        height: 30px;
+        margin-top: 60px;
+        margin-left: 25px;
+    }
 `;
 const Total = styled.span`
     position: absolute;
@@ -50,19 +72,34 @@ const Total = styled.span`
     margin-left: 80px;
     border-radius: 50%;
     border: 4px solid white;
+    @media (max-width: 320px){
+        top: -65px;
+        margin-left: 50px;
+    }
 `;
 const SubDesc = styled.span`
     margin-top: 30px;
     text-align: center;
+    @media (max-width: 320px){
+        font-size: 13px;
+        margin-top: 5px;
+    }
 `;
 const Bottom = styled.div`
     display: flex;
     position: relative;
-
+    @media (max-width: 320px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 const Awards = styled.div`
     flex: 1;
     position: relative;
+    @media (max-width: 320px){
+        display: none;
+    }
 
     &::before{
         content: "";
@@ -73,6 +110,9 @@ const Awards = styled.div`
         position: absolute;
         top: -50px;
         margin-right: 50px;
+        @media (max-width: 320px){
+        display: none;
+    }
     }
 
 
@@ -88,6 +128,9 @@ const AwardsContainer = styled.div`
     border-right: 6px solid white;
     border-top: none;
     margin-top: 70px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 
 const TotalAwards = styled.div`
@@ -101,10 +144,16 @@ const TotalAwards = styled.div`
     margin-left: 80px;
     border-radius: 50%;
     border: 4px solid white;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const SubDescAward = styled.span`
     margin-top: 30px;
     text-align: center;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const Desc = styled.div`
     flex: 1;
@@ -118,6 +167,9 @@ const Desc = styled.div`
         position: absolute;
         top: -50px;
         margin-right: 50px;
+        @media (max-width: 320px){
+        display: none;
+    }
     }
 
     &::after{
@@ -129,18 +181,35 @@ const Desc = styled.div`
         position: absolute;
         bottom: -30px;
         margin-right: 50px;
+        @media (max-width: 320px){
+        display: none;
+    }
     }
 `;
 const DescItem1 = styled.div`
     width: 70%;
     margin-top: 15px;
     margin-left: 130px;
-
+    @media (max-width: 320px){
+        width: 320px;
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 13px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
 `;
 const DescItem2 = styled.div`
     width: 70%;
     margin-top: 15px;
     margin-left: 130px;
+    @media (max-width: 320px){
+        width: 320px;
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 13px;
+        text-align: center;
+    }
 
 `;
 const About = () => {

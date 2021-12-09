@@ -16,6 +16,12 @@ const Container = styled.div`
     overflow: hidden;
     position: relative;
     top: 60px;
+    @media (max-width: 320px){
+        flex-direction: column;
+        width: 320px;
+        padding: 0 30px;
+        top: 30px;
+    }
 `;
 const Left = styled.div`
     flex: 1;
@@ -24,26 +30,43 @@ const Left = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;   
-    position: relative; 
+    position: relative;
+    @media (max-width: 320px){
+        width: 320px;
+    } 
 `;
 const Right = styled.div`
     flex: 1;
     position: relative;
+    @media (max-width: 320px){
+        width: 320px;
+    }
+   
 `;
 const LeftTop = styled.div`
     margin-bottom: 30px;
+
+    @media (max-width: 320px){
+        margin-bottom: 5px;
+    }
 `;
 const Title = styled.h1`
     font-size: 60px;
     margin-bottom: 20px;
     color: ${props=>props.brown && '#f8a31b'};
     font-family: 'Lora', sans-serif;
+    @media (max-width: 320px){
+       font-size: 30px;
+       margin-bottom: 5px;
+    }
 `;
 const Desc = styled.span`
     font-size: 16px;
     margin-bottom: 20px;
     font-family: 'Lora', sans-serif;
-
+    @media (max-width: 320px){
+        font-size: 14px;
+    }
 `;
 const LeftBottom = styled.div`
     display: flex;
@@ -59,12 +82,20 @@ const HireMe = styled.span`
     font-family: 'Lora', sans-serif;
     cursor: pointer;
     margin-right: 30px;
+    @media (max-width: 320px){
+        width: 100px;
+        height: 15px;
+        font-size: 12px;
+    }
 `;
 const Img = styled.img`
     width: 70px;
     height: 40px;
     object-fit: contain;
     margin-left: 10px;
+    @media (max-width: 320px){
+        display: none;
+    }
 
 `;
 const Imoji = styled.img`
@@ -74,6 +105,9 @@ const Imoji = styled.img`
     position: absolute;
     top: 0;
     left: 400px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const Circle1 = styled.div`
     width: 250px;
@@ -83,6 +117,9 @@ const Circle1 = styled.div`
     position: absolute;
     top: 70px;
     right: 130px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const Circle2 = styled.div`
     width: 250px;
@@ -92,6 +129,9 @@ const Circle2 = styled.div`
     position: absolute;
     bottom: 170px;
     right: -30px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const FacebookIcon = styled.img`
     width: 35px;
@@ -103,6 +143,9 @@ const FacebookIcon = styled.img`
     position: absolute;
     top: 80px;
     right: 50px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const GoogleIcon = styled.img`
     width: 25px;
@@ -114,6 +157,9 @@ const GoogleIcon = styled.img`
     position: absolute;
     top: 120px;
     left: 210px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const TwitterIcon = styled.img`
     width: 25px;
@@ -125,6 +171,9 @@ const TwitterIcon = styled.img`
     position: absolute;
     bottom: 340px;
     right: -30px;
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const ManImage = styled.img`
     width: 100%;
@@ -133,6 +182,10 @@ const ManImage = styled.img`
     position: absolute;
     bottom: 30px;
     left: 130px;
+    @media (max-width: 320px){
+        left: -30px;
+        bottom: 60px;
+    }
 `;
 const Home = () => {
     return (

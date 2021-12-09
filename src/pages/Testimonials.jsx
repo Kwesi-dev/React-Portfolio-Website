@@ -8,11 +8,21 @@ const Container = styled.div`
     justify-content: center;
     position: relative;
     top: 60px;
+    @media (max-width: 320px){
+        top: 30px;
+        height: 100%;
+        width: 320px;
+    }
 `;
 const Wrapper = styled.div`
     margin: 20px 40px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 320px){
+        flex-direction: column;
+        margin: 23px;
+        padding: 0;
+    }
 `;
 const Design = styled.div`
     width: 100%;
@@ -21,6 +31,10 @@ const Design = styled.div`
     bottom: 0;
     background-color: #0a0a5c;
     clip-path: polygon(38% 78%, 76% 63%, 100% 56%, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 99%);
+    
+    @media (max-width: 320px){
+        display: none;
+    }
 `;
 const Testimonials = () => {
     return (
