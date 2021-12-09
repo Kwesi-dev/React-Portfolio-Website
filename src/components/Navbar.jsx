@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useState } from 'react'
 
 const Container = styled.div`
     background-color: white;
@@ -66,7 +67,57 @@ const RightItem = styled.a`
         display: none;
     }
 `;
+const Humbergur = styled.div`
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    opacity: 0;
+    @media (max-width: 320px) {
+        opacity: 1;
+        margin-right: 35px;
+    }
+`;
+const Line = styled.span`
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 7px;
+`;
+const DropDown = styled.div`
+    background-color: #1a1919;
+    width: 170px;
+    height: 200px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    opacity: 0;
+    @media (max-width: 320px) {
+        opacity: 1;
+        width: 100%;
+        height: 568px;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+    }
+`;
+const DropItem = styled.a`
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+`;
 const Navbar = () => {
+    const [active, setActive] = useState(false)
+    const handleClick = ()=>{
+        setActive(!active)
+    }
+    console.log(active)
     return (
         <Container>
             <Wrapper>
@@ -86,8 +137,28 @@ const Navbar = () => {
                     <RightItem contact href="#contact">
                         Contact Us
                     </RightItem>
-                    
+                    <Humbergur onClick={handleClick} active>
+                        <Line></Line>
+                        <Line></Line>
+                        <Line></Line>
+                    </Humbergur>
                 </Right>
+                {active &&
+                <DropDown>
+                    <DropItem href="#home">
+                        Home
+                    </DropItem>
+                    <DropItem href="#about">
+                        About Us
+                    </DropItem>
+                    <DropItem href="#testimonials">
+                        Testimonials
+                    </DropItem>
+                    <DropItem contact href="#contact">
+                        Contact Us
+                    </DropItem>
+                </DropDown>
+                }
             </Wrapper>
         </Container>
     )
