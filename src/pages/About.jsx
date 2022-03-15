@@ -1,20 +1,21 @@
 import styled from "styled-components"
 
 const Container = styled.div`
+    width: 100%;
     height: calc(100vh - 60px);
     background-color: #0e0d0d;
     overflow: none;
     position: relative;
     top: 60px;
-    @media (max-width: 320px){
-        width: 320px;
-        top: 30px;
-        height: calc(100vh - 200px);
+    padding: 1.5rem 2rem;
+    box-sizing: border-box;
+    @media screen and (max-width: 425px){
+        height: fit-content;
     }
 `;
 const Wrapper = styled.div`
+    width: 100%;
     height: 100%;
-    margin: 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,25 +27,33 @@ const Wrapper = styled.div`
 
 `;
 const Top = styled.div`
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (max-width: 320px){
+    @media screen and (max-width: 580px){
         flex-direction: column;
     }
 `;
 const Title = styled.h1`
     font-family: 'Lora', sans-serif;
     font-weight: bold;
-    font-size: 100px;
-    @media (max-width: 320px){
-        display: none;
+    font-size: 10rem;
+    @media  screen and (max-width: 768px){
+        font-size: 5rem;
     }
+    @media screen and (max-width: 600px){
+        font-size: 3rem;
+    }
+    @media screen and (max-width: 425px){
+        margin: 20px 0;
+    }
+    
 `;
 const JobDone = styled.div`
     display: flex;
     flex-direction: column;
-    width: 230px;
+    width: min(100%, 230px);
     height: 65px;
     border-radius: 5px;
     border-bottom: 14px solid white;
@@ -54,15 +63,16 @@ const JobDone = styled.div`
     margin-top: 160px;
     margin-right: 50px;
     position: relative;
-    @media (max-width: 320px){
-        width: 150px;
-        height: 30px;
-        margin-top: 60px;
-        margin-left: 25px;
+    @media (max-width: 768px){
+       margin-top: 50px;
+    }
+    @media screen and (max-width: 425px){
+        margin: 50px auto;
     }
 `;
 const Total = styled.span`
     position: absolute;
+    font-size: 1.6rem;
     top: -60px;
     width: 50px;
     height: 50px;
@@ -73,54 +83,52 @@ const Total = styled.span`
     border-radius: 50%;
     border: 4px solid white;
     @media (max-width: 320px){
-        top: -65px;
-        margin-left: 50px;
+        left: 10px;
     }
 `;
 const SubDesc = styled.span`
+    font-size: 1.6rem;
     margin-top: 30px;
     text-align: center;
     @media (max-width: 320px){
-        font-size: 13px;
+        font-size: 1.3rem;
         margin-top: 5px;
     }
 `;
 const Bottom = styled.div`
+    flex: 1;
     display: flex;
     position: relative;
-    @media (max-width: 320px){
+    margin-top: 20px;
+    @media screen and (max-width: 580px){
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        margin: 20px auto;
     }
 `;
 const Awards = styled.div`
     flex: 1;
     position: relative;
-    @media (max-width: 320px){
-        display: none;
-    }
 
-    &::before{
-        content: "";
-        display: block;
-        background-color: white;
-        width: 200px;
-        height: 1px;
-        position: absolute;
-        top: -50px;
-        margin-right: 50px;
-        @media (max-width: 320px){
-        display: none;
-    }
-    }
+    // &::before{
+    //     content: "";
+    //     display: block;
+    //     background-color: white;
+    //     width: min(100%, 200px);
+    //     height: 1px;
+    //     position: absolute;
+    //     top: -50px;
+    //     margin-right: 50px;
+    //     @media (max-width: 320px){
+    //     display: none;
+    // }
+    // }
 
 
 `;
 const AwardsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: min(100%,200px);
     height: 65px;
     border-radius: 5px;
     border-bottom: 14px solid white;
@@ -128,8 +136,11 @@ const AwardsContainer = styled.div`
     border-right: 6px solid white;
     border-top: none;
     margin-top: 70px;
-    @media (max-width: 320px){
-        display: none;
+    @media screen and (max-width: 580px){
+        width: 75%;
+    }
+    @media screen and (max-width: 425px){
+        margin: 50px auto;
     }
 `;
 
@@ -143,72 +154,60 @@ const TotalAwards = styled.div`
     justify-content: center;
     margin-left: 80px;
     border-radius: 50%;
+    font-size: 1.8rem;
     border: 4px solid white;
-    @media (max-width: 320px){
-        display: none;
+    @media screen and (max-width: 320px){
+       left: 30px;
     }
 `;
 const SubDescAward = styled.span`
+    font-size: 1.6rem; 
     margin-top: 30px;
     text-align: center;
-    @media (max-width: 320px){
-        display: none;
-    }
 `;
 const Desc = styled.div`
     flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-    &::before{
-        content: "";
-        display: block;
-        background-color: white;
-        width: 650px;
-        height: 1px;
-        position: absolute;
-        top: -50px;
-        margin-right: 50px;
-        @media (max-width: 320px){
-        display: none;
-    }
-    }
-
-    &::after{
-        content: "";
-        display: block;
-        background-color: white;
-        width: 650px;
-        height: 1px;
-        position: absolute;
-        bottom: -30px;
-        margin-right: 50px;
-        @media (max-width: 320px){
-        display: none;
-    }
-    }
 `;
 const DescItem1 = styled.div`
-    width: 70%;
     margin-top: 15px;
     margin-left: 130px;
-    @media (max-width: 320px){
+    font-size: 1.6rem;
+    @media (max-width: 768px){
         width: 320px;
         margin-left: 0;
-        margin-top: 0;
-        font-size: 13px;
-        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 600px){
+        font-size: 1.4rem;
+    }
+    @media screen and (max-width: 425px){
         text-align: center;
+    }
+    @media screen and (max-width: 356px){
+        width: 80%;
+        margin: 0 auto;
     }
 `;
 const DescItem2 = styled.div`
-    width: 70%;
     margin-top: 15px;
     margin-left: 130px;
-    @media (max-width: 320px){
+    font-size: 1.6rem;
+    @media (max-width: 768px){
         width: 320px;
         margin-left: 0;
-        margin-top: 0;
-        font-size: 13px;
+    }
+    @media screen and (max-width: 600px){
+        font-size: 1.4rem;
+    }
+    @media screen and (max-width: 425px){
         text-align: center;
+    }
+    @media screen and (max-width: 356px){
+        width: 80%;
+        margin: 0 auto;
     }
 
 `;
@@ -231,12 +230,12 @@ const About = () => {
                         </AwardsContainer>
                     </Awards>
                     <Desc>
-                    <DescItem1>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum non rem saepe minima dicta est mollitia. Possimus laboriosam similique, ducimus fugit, ut eos totam accusamus laudantium quisquam fugiat magni quibusdam!
-                    </DescItem1>
-                    <DescItem2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus maiores, repellendus natus fugiat corporis labore veritatis, rerum aut ipsam amet fugit corrupti magnam impedit debitis cum placeat minima. Modi, harum?    
-                    </DescItem2>
+                        <DescItem1>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum non rem saepe minima dicta est mollitia. Possimus laboriosam similique, ducimus fugit, ut eos totam accusamus laudantium quisquam fugiat magni quibusdam!
+                        </DescItem1>
+                        <DescItem2>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus maiores, repellendus natus fugiat corporis labore veritatis, rerum aut ipsam amet fugit corrupti magnam impedit debitis cum placeat minima. Modi, harum?    
+                        </DescItem2>
                     </Desc>
                 </Bottom>
             </Wrapper>

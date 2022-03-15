@@ -12,10 +12,9 @@ const Container = styled.div`
     background-color: #0a0a5c;
     position: relative;
     top: 60px;
-    @media (max-width: 320px){
-        width: 320px;
-        height: 100%;
-        top: 30px;
+    @media (max-width: 768px){
+        height: fit-content;
+        top: 60px;
     }
 `;
 const Wrapper = styled.div`
@@ -23,10 +22,13 @@ const Wrapper = styled.div`
     display: flex;
     padding: 50px;
     box-sizing: border-box;
-    @media (max-width: 320px){
+    @media (max-width: 768px){
         flex-direction: column;
-        padding: 0;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
+    
 `;
 const Left = styled.div`
     flex: 1;
@@ -40,12 +42,13 @@ const Title = styled.h1`
     color: white;
     font-family: 'Lora', sans-serif;
     margin-bottom: 20px;
+    font-size: 2rem;
 `;
 const Parag = styled.span`
     color: white;
     font-family: 'Lora', sans-serif;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.6rem;
 `;
 const Center = styled.div`
     margin-bottom: 20px;
@@ -60,7 +63,7 @@ const ContactIcon = styled.div`
 const ContactInfo = styled.span`
     color: white;
     font-family: 'Lora', sans-serif;
-    font-size: 14px;
+    font-size: 1.7rem;
     margin-left: 10px;
 `;
 const MailIcon = styled.div`
@@ -69,16 +72,17 @@ const MailIcon = styled.div`
 const Email = styled.span`
     color: white;
     font-family: 'Lora', sans-serif;
-    font-size: 14px;
+    font-size: 1.7rem;
     margin-left: 10px;
 `;
 const LocationIcon = styled.div`
     color: #2727c5;
+    font-size: 2rem;
 `;
 const Location = styled.span`
     color: white;
     font-family: 'Lora', sans-serif;
-    font-size: 14px;
+    font-size: 1.7rem;
     margin-left: 10px;
 `;
 const Bottom = styled.div`
@@ -92,16 +96,16 @@ const SocialMediaIcon = styled.div`
     cursor: pointer;
 `;
 const Facebook = styled.img`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 `;
 const Instagram = styled.img`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 `;
 const Twitter = styled.img`
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 `;
 const Right = styled.div`
     flex: 1;
@@ -112,7 +116,7 @@ const Right = styled.div`
     }
 `;
 const Form = styled.div`
-    width: 50%;
+    width: min(70%, 400px);
     height: 80%;
     background-color: white;
     margin-top: 30px;
@@ -121,8 +125,11 @@ const Form = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    @media (max-width: 320px){
-        width: 70%;
+    @media screen and (max-width: 768px){
+        width: 300px;
+    }
+    @media screen and (max-width: 370px){
+        width: 100%;
     }
 `;
 const FormItem = styled.div`
@@ -133,6 +140,7 @@ const FormItem = styled.div`
 const Label = styled.label`
     margin-bottom: 5px;
     font-family: 'Lora', sans-serif;
+    font-size: 1.6rem;
 `;
 const InputContainer = styled.div`
     width: 100%;
@@ -146,7 +154,7 @@ const Input = styled.input`
     width: 90%;
     padding: 7px 10px;
     border: none;
-
+    font-size: 1.6rem;
     &:focus{
         outline: none;
     }
@@ -154,19 +162,21 @@ const Input = styled.input`
 const TextArea = styled.textarea`
     height: 120px;
     border: 1px solid lightgray;
+    font-size: 1.6rem;
+    resize: none;
     &:focus{
         outline: none;
         border: 1.5px solid #31b7ec;
     }
 `;
 const Button = styled.button`
-    width: 50%;
+    width: min(70%, 200px);
     padding: 7px;
     border: none;
     border-radius: 7px;
     cursor: pointer;
     color: white;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     background-color: #31b7ec;
     margin-top: 10px;
@@ -178,6 +188,7 @@ const Icon = styled.div`
     margin-right: 5px;
     border-right: 1px solid lightgray;
     padding-right: 2px;
+    font-size: 2.4rem;
 `;
 
 const Contact = () => {
